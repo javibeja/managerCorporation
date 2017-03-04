@@ -1,0 +1,127 @@
+/*-------------------------------------------------------------------------oManager Corporation Theme*/
+.pika-single.oManager-theme {
+   /* color: #fff;
+    background: #333;*/
+	color: black;
+    /*background: #81DAF5;*/
+		background: -webkit-linear-gradient(180deg, white,#81DAF5 );
+    border: 1px solid #666;
+    border-bottom-color: #999;
+	-webkit-border-radius: 20px 20px;  /* Safari  */
+}
+
+.oManager-theme .pika-label {
+    /*background-color: #333;
+    background-color: #81DAF5;*/
+	 background: transparent;  
+}
+
+.oManager-theme .pika-prev,
+.oManager-theme .is-rtl .pika-next {
+}
+
+.oManager-theme .pika-next,
+.oManager-theme .is-rtl .pika-prev {
+  
+}
+
+.oManager-theme .pika-table th {
+/*Color de los dias de la semana*/
+    color: black;
+}
+
+.oManager-theme .pika-button {
+   /*Dias disponibles para marcar pero que no estan marcados*/
+   color:black;
+   border: 1px solid #00BFFF;
+   -webkit-border-radius: 10px 10px;  /* Safari  */
+   text-align:center;
+   font-weight: bold;
+    background: transparent;  
+}
+
+.oManager-theme .pika-week {
+    color: #999;
+}
+
+.oManager-theme .is-today .pika-button {
+	/*Color del numerito del dia de hoy*/
+    color: red;
+}
+
+.oManager-theme .is-selected .pika-button {
+	/*Colores del boton seleccionado*/
+    color: blue;
+	/*background: #A9E2F3;*/
+	background: #00BFFF;
+    box-shadow: inset 0 1px 2px #178fe5;
+}
+
+.oManager-theme .is-disabled .pika-button {
+    color: #999;
+    opacity: .3;
+}
+
+.oManager-theme .pika-button:hover {
+	/*Efecto que realiza cuando ponemos el raton encima de una celda de un dia*/
+    color: blue !important;
+  	background: -webkit-linear-gradient(180deg, #81DAF5, white);
+}
+/*---------------------------------------------------------------------FIN oManager Corporation Theme*/
+/*-----------------------------------------------------------------------------------------Dark Theme*/
+
+.pika-single.dark-theme {
+    color: #fff;
+    background: #333;
+    border: 1px solid #666;
+    border-bottom-color: #999;
+}
+
+.dark-theme .pika-label {
+    background-color: #333;
+}
+
+.dark-theme .pika-prev,
+.dark-theme .is-rtl .pika-next {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAQAAACGG/bgAAAAQ0lEQVR4Ae3KIQ4AIBTD0N0/IeHGI3UIRA3ut/Zl+ltXc5++htVAmIAwAWECwgSEKbgthEoIlRAqIVRCqINQB9nDgQd7ktwFo6UpWQAAAABJRU5ErkJggg==');
+}
+
+.dark-theme .pika-next,
+.dark-theme .is-rtl .pika-prev {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAQAAACGG/bgAAAAP0lEQVQ4y+3TMQoAMAgEwfwfAvvjTZ1uGzuvHhBPPGczEG+FRqqRaqQaqUaqkX6QBmmjacvQ6qEVTjsh+xizebvlaWptGXZAAAAAAElFTkSuQmCC');
+}
+
+.dark-theme .pika-table th {
+    color: #999;
+}
+
+.dark-theme .pika-button {
+    color: #fff;
+    background: #222;
+}
+
+.dark-theme .pika-week {
+    color: #999;
+}
+
+.dark-theme .is-today .pika-button {
+    color: #33aaff;
+}
+
+.dark-theme .is-selected .pika-button {
+    color: #fff;
+    background: #33aaff;
+    box-shadow: inset 0 1px 3px #178fe5;
+}
+
+.dark-theme .is-disabled .pika-button {
+    color: #999;
+    opacity: .3;
+}
+
+.dark-theme .pika-button:hover {
+    color: #fff !important;
+    background: #ff8000 !important;
+}
+
+/*-------------------------------------------------------------------------------------FIN Dark Theme*/

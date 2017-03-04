@@ -1,0 +1,86 @@
+<form class="form-horizontal" name="frmAltaProduccion">
+	<fieldset>
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="nombre">Nombre de la Producción:</label>
+			<div class="col-md-8">
+				<input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control input-md">
+				
+			</div>
+		</div>
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="director">Director</label>
+			<div id="comboDirectores" class="col-md-8">
+				
+			</div>
+		</div>
+		<!-- Multiple Radios (inline) -->
+		<div id="tipoProduccion" class="form-group">
+			<label class="col-md-4 control-label" for="tipoProduccion">Tipo de produccion</label>
+			<div class="col-md-8">
+				<label class="radio-inline" for="tipoProduccion-0">
+					<input type="radio" name="tipoProduccion" id="tipoProduccion-0" value="Serie">
+					Serie
+				</label>
+				<label class="radio-inline" for="tipoProduccion-1">
+					<input type="radio" name="tipoProduccion" id="tipoProduccion-1" value="Pelicula">
+					Película
+				</label>
+				<label class="radio-inline" for="tipoProduccion-2">
+					<input type="radio" name="tipoProduccion" id="tipoProduccion-2" value="Obra">
+					Obra
+				</label>
+			</div>
+		</div>
+		<div id="obra">
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="tipoObra">Genero / Tipo</label>
+				<div class="col-md-8">
+					<select id="tipoObra" class="form-control" name="tipoObra">
+						
+					</select>
+					
+				</div>
+			</div>
+		</div>
+		<!-- Text input-->
+		<div id="pelicula">
+			<div class="form-group">
+				<div class="col-md-2" >
+				</div>
+				<label class="hidden-md hidden-lg hidden-xl control-label  col-sm-12 col-xs-12" style="text-align:left;"for="fecha">Fecha</label>
+				<label class="col-md-1 hidden-sm hidden-xs control-label"for="fecha">Fecha</label>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-4" id="divSelectYear">
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-4" id="divSelectMonth">
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-4" id="divSelectDay">
+				</div>
+			</div>
+		</div>
+		<!-- Text input-->
+		<div id="serie">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="numCapitulos">Numero de Capítulos</label>
+				<div class="col-md-8">
+					<input id="numCapitulos" name="numCapitulos" type="text" maxlength="3" placeholder="NumCapítulos" class="form-control input-md">
+					
+				</div>
+			</div>
+		</div>
+		<!-- Button (Double) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for=""></label>
+			<div class="col-md-8">
+				<input type="button" class="btn btn-success" name="altaProduccion" value="Añadir">
+				<input type="reset" class="btn btn-danger" value="Reset" />
+			</div>
+		</div>
+		<!-- Button -->
+		
+	</fieldset>
+</form>

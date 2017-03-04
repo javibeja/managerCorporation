@@ -1,0 +1,789 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>Menu</title>
+		<link rel="stylesheet" href="css/pikaday.css">
+		<link rel="stylesheet" href="css/theme.css">
+		
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+		<link href="css/toastr.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="esqueleto.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<style type="text/css">
+		#actor,#pelicula, #serie, #obra, #añadirtrabajador, #añadirproduccion,  #añadircontrato, #bajaTrabajador, #ediciones, 
+		#botonBorrarFilaActorPorEdicion, #listaProduccionPorTipo, #añadirCasting, #listarObrasGenero, #divListarSeriesNumCap, 
+		#divListarPeliculasPorFecha, #darBajaContrato, #añadirActorACasting{
+		display: none;
+		}
+		.error{
+			background-color: yellow;
+		}
+		#getIdProd{
+			display: none;
+		}
+		
+
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<!-- cabecera + menú -->
+			<div id="cabeceraMenu" >
+				<div class="row">
+					<div class="col-md-1 hidden-xs">
+					</div>
+					<div  id="banner" class="col-md-10 hidden-md hidden-sm hidden-xs">
+						<div style="margin-top:1%;" class="page">
+							<h1 id="h1Cabecera">
+							Maganer Corporation
+							</h1>
+						</div>
+					</div>
+					<div  id="bannerLittle" class="col-xs-12 hidden-xs hidden-lg hidden-xl">
+						<div style="margin-top:1%;" class="page">
+							<h1 id="h1Cabeceralittle">
+							Maganer Corporation
+							</h1>
+						</div>
+					</div>
+					<div class="col-md-1 hidden-xs">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div id="navbar" class="col-md-10">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<a class="navbar-brand hidden-sm hidden-xs" >M.C S.L</a>
+								<a class="navbar-brand hidden-md hidden-lg hidden-xl" >Manager Corporation S.L</a>
+							</div>
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#" id="botonInicio">Inicio</a></li>
+								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Trabajadores <span class="caret"></span></a>
+								<ul id="apartadoTrabajadores" class="dropdown-menu">
+									<li><a href="#" id="añadeTrabajador">Añadir trabajador</a></li>
+									<li><a href="#" id="darBajaTrabajador">Dar de baja trabajador</a></li>
+									<li><a href="#" id="listadoActores">Listar Actores</a></li>
+									<li><a href="#" id="listadoRepresentantes" >Listar Representantes</a></li>
+									<li><a href="#" id="listadoDirectores" >Listar Directores</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Producciones <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#" id="añadeProduccion">Crear Produccion</a></li>
+								<li><a href="#" id="listarProduccionesTipoPeliculas" value="Pelicula">Listar Peliculas</a></li>
+								<li><a href="#" id="listarProduccionesTipoSeries" value="Serie">Listar Series</a></li>
+								<li><a href="#" id="listarProduccionesTipoObras" value="Obra" >Listar Obras</a></li>
+								<li><a href="#" id="listarPeliculasEntreFechas" >Listar peliculas por fechas</a></li>
+								<li><a href="#" id="listarObrasPorGenero" >Listar obras por genero</a></li>
+								<li><a href="#" id="listarSeriesNumCap" >Listar series por num cap.</a></li>
+							</ul>
+						</li>
+											<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Castings <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#"  id="añadeCasting">Añadir Casting</a></li>
+						<li><a href="#"  id="añadeActorACasting">Añadir actor a casting</a></li>
+					</ul>
+				</li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contratos <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id="realizaContrato">Realizar un contrato</a></li>
+							<li><a href="#" id="bajaContrato">Dar baja un contrato</a></li>
+
+						</ul>
+					</li>
+
+			</ul>
+		</div>
+		<div class="col-md-1">
+		</div>
+	</div>
+</div>
+</div>
+<!-- fin cabecera + menú -->
+<!-- INICIO -->
+<div id="inicio">
+<div class="hidden-md hidden-lg hidden-xl">
+	<br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<div class="row">
+	<div class="col-md-1">
+	</div>
+	<div class="col-md-10">
+		<div id="uml">
+			<div class="row">
+				<div class="col-md-12" >
+					<h4>
+					Practica 2 Grupo 3
+					</h4>
+					<p>
+						Desarrollada por Manuel Osto Méndez y Javier Bejarano Campos, el contenido y funcionamiento de esta web esta basado según el siguiente diagrama UML.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					 <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;xml&quot;:&quot;&lt;mxfile userAgent=\&quot;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36\&quot; version=\&quot;6.0.2.15\&quot; editor=\&quot;www.draw.io\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;,&quot;toolbar&quot;:&quot;pages zoom layers lightbox&quot;,&quot;page&quot;:0}"></div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="col-md-1">
+		</div>
+	</div>
+</div>
+</div>
+<!-- FIN INICIO -->
+
+<!-- AÑADIR CASTING -->
+<div id="añadirCasting" title="Crear casting">
+<form class="form-horizontal" name="frmAltaCasting">
+	<fieldset>
+				<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="fecha">Fecha Comienzo</label>
+			<div class="col-md-8">
+				<input id="fechaInicioCasting" readonly="readonly" name="fechaInicioCasting"  type="text" placeholder="Seleccione una fecha" class="form-control">
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="fecha">Fecha Final</label>
+			<div class="col-md-8">
+				<input id="fechaFinCasting" readonly="readonly" name="fechaFinCasting" type="text"  placeholder="Seleccione una fecha" class="form-control">
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="produccion">Nombre Casting</label>
+			<div class="col-md-8">
+			<input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control input-md">
+			</div>
+			<div class="col-md-6">
+			</div>
+		</div>
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="produccion">Producción</label>
+			<div id="comboProducciones"class="col-md-8">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<input type="hidden" autofocus="autofocus" />
+			</div>
+			<div class="col-md-8">
+				<input type="button" class="btn btn-lg btn-primary" name="altaCasting" value="Añadir">
+				<input type="reset" class="btn btn-lg btn-danger" value="Reset"/>
+				
+			</div>
+		</div>
+		<br>
+	</fieldset>
+</form>
+</div>
+<!-- FIN AÑADIR CASTING -->
+
+<!-- AÑADIR TRABJADORES-->
+<div id="añadirtrabajador" title="Añadir Trabajador">
+	<div class="hidden-md hidden-lg hidden-xl">
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<form class="form-horizontal" name="frmAltaTrabajador">
+	<fieldset>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="dni">DNI</label>
+			<div class="col-md-8">
+				<input id="dni" name="dni" type="text" placeholder="DNI" class="form-control input-md">
+			</div>
+		</div>
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="nombre">Nombre</label>
+			<div class="col-md-8">
+				<input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control input-md">
+			</div>
+		</div>
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="tlfn">Teléfono</label>
+			<div class="col-md-8">
+				<input id="tlfn" name="tlfn" type="tel" placeholder="Teléfono" class="form-control input-md">
+			</div>
+		</div>
+		<!-- Text input-->
+		<!-- Nacionalidad-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="selectbasic">País de Nacimiento</label>
+			<div class="col-md-8">
+				<select id="comboNacionalidad" class="form-control" name="comboNacionalidad">
+					<option value="Saudí">Arabia Saudí</option>
+					<option value="Argentino">Argentina</option>
+					<option value="Australiano">Australia</option>
+					<option value="Belga">Bélgica</option>
+					<option value="Beliciano">Belice</option>
+					<option value="Boliviano">Bolivia</option>
+					<option value="Brasileño">Brasil</option>
+					<option value="Camboyano">Camboya</option>
+					<option value="Canadiense">Canadá</option>
+					<option value="Chileno">Chile</option>
+					<option value="Chino">China</option>
+					<option value="Colombiano">Colombia</option>
+					<option value="Costarricense">Costa Rica</option>
+					<option value="Cubano">Cuba</option>
+					<option value="Danés">Dinamarca</option>
+					<option value="Estadounidense">Estados Unidos</option>
+					<option value="Escosés">Escocia</option>
+					<option value="Ecuatoriano">Ecuador</option>
+					<option value="Epicio">Egipto</option>
+					<option value="Esloveno">Solvencia</option>
+					<option value="Español">España</option>
+					<option value="Filipino">Filipinas</option>
+					<option value="Finlandés">Finlandia</option>
+					<option value="Francés">Francia</option>
+					<option value="Galés">Galesa</option>
+					<option value="Griego">Grecia</option>
+					<option value="Guatemalteco">Guatemala</option>
+					<option value="Guayanés">Guyana</option>
+					<option value="Hindú">India</option>
+					<option value="Holandés">Holanda</option>
+					<option value="Hondureño">Honduras</option>
+					<option value="Indonesio">Indonesia</option>
+					<option value="Inglés">Inglaterra</option>
+					<option value="Iraní">Irán</option>
+					<option value="Iraquí">Iraq</option>
+					<option value="Irlandés">Irlanda</option>
+					<option value="Italiano">Italia</option>
+					<option value="Japonés">Japón</option>
+					<option value="Kazajstán">Kazajstán</option>
+					<option value="Checo">La República Checa</option>
+					<option value="Dominicano">La República Dominicana</option>
+					<option value="Marroquí">Marruecos</option>
+					<option value="Mejicano">México</option>
+					<option value="Mongol">Mongolia</option>
+					<option value="Nicaragüense">Nicaragua</option>
+					<option value="Noruego">Noruega</option>
+					<option value="Pakistaní">Pakistán</option>
+					<option value="Panameño">Panama</option>
+					<option value="Paraguayo">Paraguay</option>
+					<option value="Peruano">Perú</option>
+					<option value="Polaco">Polonia</option>
+					<option value="Portugués">Portugal</option>
+					<option value="Puertorriquense">Puerto Rico</option>
+					<option value="Romano">Roma</option>
+					<option value="Ruso">Rusia</option>
+					<option value="Salvadoreño">El Salvador</option>
+					<option value="Singaporés">Singapor</option>
+					<option value="Sudafricano">Sud África</option>
+					<option value="Sueco">Suecia</option>
+					<option value="Suizo">Suiza</option>
+					<option value="Surinamés">Surinam</option>
+					<option value="Tanilandés">Tailandia</option>
+					<option value="Taiwanés">Taiwan</option>
+					<option value="Turco">Turquia</option>
+					<option value="Uruguayo">Uruguay</option>
+					<option value="Venezolano">Venezuela</option>
+				</select>
+			</div>
+		</div>
+		<!-- Multiple Radios (inline) -->
+		<div id="papel" class="form-group">
+			<label class="col-md-4 control-label" for="radios">Tipo de trabajador</label>
+			<div class="col-md-8">
+				<label class="radio-inline" for="radios-0">
+					<input type="radio" name="tipoTrabajador" id="radios-0" value="Director" checked="checked">
+					Director
+				</label>
+				<label class="radio-inline" for="radios-1">
+					<input type="radio" name="tipoTrabajador" id="radios-1" value="Representante">
+					Representante
+				</label>
+				<label class="radio-inline" for="radios-2">
+					<input type="radio" name="tipoTrabajador" id="radios-2" value="Actor">
+					Actor
+				</label>
+			</div>
+		</div>
+		<div id="actor">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="selectbasic">Representante</label>
+				<div id="comboRepresentantes"class="col-md-8">
+				</div>
+			</div>
+			<!-- Multiple Radios -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="estatus">Estatus</label>
+				<div class="col-md-8">
+					<div class="radio">
+						<label for="estatus-0">
+							<input type="radio" name="estatus" id="estatus-0" value="Famoso" checked="checked">
+							Famoso
+						</label>
+					</div>
+					<div class="radio">
+						<label for="estatus-1">
+							<input type="radio" name="estatus" id="estatus-1" value="Desconocido">
+							Desconocido
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-8">
+				<input type="button" class="btn btn-lg btn-primary" name="altaTrabajador" value="Añadir">
+			
+			<input type="reset" class="btn btn-lg btn-danger" value="Reset"  />
+</div>
+		</div>
+		<br>
+	</fieldset>
+</form>
+</div>
+<!-- FIN AÑADIR TRABAJADORES  -->
+
+<!-- DAR BAJA TRABAJADOR  -->
+<div id="bajaTrabajador" title="Dar de baja un trabajador">
+<form class="form-horizontal" name="frmBajaTrabajador">
+	<br>
+	<fieldset>
+		<!-- Multiple Radios (inline) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="radios">Dar de baja a un:</label>
+			<div class="col-md-8">
+				<label class="radio-inline" for="radios-0">
+					<input type="radio" name="tipoTrabajador" id="radios-0" value="Director">
+					Director
+				</label>
+				<label class="radio-inline" for="radios-1">
+					<input type="radio" name="tipoTrabajador" id="radios-1" value="Representante">
+					Representante
+				</label>
+				<label class="radio-inline" for="radios-2">
+					<input type="radio" name="tipoTrabajador" id="radios-2" value="Actor">
+					Actor
+				</label>
+			</div>
+		</div>
+		<!-- Text input-->
+		<div id="dniTipoDeTrabajadorADarDeBaja">
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="dni">Trabajador</label>
+				<div class="col-md-8" id="listaTrabajadoresADarDeBaja">
+					
+				</div>
+			</div>
+		</div>
+		<div class="row">
+					<div class="col-md-4">
+			</div>
+			<div class="col-md-8">
+				<input type="button" class="btn btn-lg btn-primary" id="btnAceptarBajaTrabajador" value="Dar de baja">
+				<input type="reset" class="btn btn-lg btn-danger" value="Reset"  />
+			</div>
+		</div>
+		<br>
+	</fieldset>
+</form>
+</div>
+<!-- FIN DAR BAJA TRABAJADOR  -->
+
+<!-- AÑADIR PRODUCCION  -->
+<div id="formularios">
+	<!-- AQUI LO CARGAMOS DINAMICAMENTE -->
+</div>
+<!-- FIN AÑADIR PRODUCCION  -->
+	
+<!--  AÑADIR CONTRATO  -->
+<div id="añadircontrato" title="Añadir contrato">
+<form class="form-horizontal" name="frmAltaContrato">
+	<fieldset>
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="fecha">Fecha Inicio</label>
+			<div class="col-md-8">
+				<input id="fechaInicio" name="fechaInicio"  type="text" readonly="readonly" placeholder="Seleccione una fecha" class="form-control">
+			</div>
+		</div>
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="fecha">Fecha Fin</label>
+			<div id="divCalendarioFechaFin" class="col-md-8">
+				<input id="fechaFin" name="fechaFin" type="text" readonly="readonly" placeholder="Seleccione una fecha" class="form-control">
+			</div>
+		</div>
+		<!-- Multiple Radios (inline) -->
+		<div id="papel" class="form-group">
+			<label class="col-md-4 control-label" for="papel">Papel a desarrollar</label>
+			<div class="col-md-8">
+				<label class="radio-inline">
+					<input type="radio" name="papel" value="Principal">
+					Principal
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="papel" value="Secundario" checked>
+					Secundario
+				</label>
+			</div>
+		</div>
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="listaproducciones">Produccion</label>
+			<div id="listaproducciones" class="col-md-8">
+
+			</div>
+		</div>
+		
+		<!-- Text input-->
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="listaActores">Actor</label>
+			<div id="listaActores" class="col-md-8">
+
+			</div>
+		</div>
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="pago">Pago</label>
+			<div class="col-md-8">
+				<input id="textinput" name="pago" type="text" placeholder="importe en € actor" class="form-control input-md">
+			</div>
+		</div>
+		<!-- Button (Double) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label"  for="aceptarContrato"></label>
+			<div class="col-md-8">
+			<input type="hidden" autofocus="autofocus" />
+				<input type="button" value="Finalizar contrato" id="aceptarContrato" name="aceptarContrato" class="btn btn-success">
+				<input type="reset" class="btn btn-warning" value="Reset"/>
+			</div>
+		</div>
+	</fieldset>
+</form>
+</div>
+<!-- FIN AÑADIR CONTRATO  -->
+
+<!-- EDICIONES-->
+<div id="ediciones" title="Ediciones">
+
+<div class="row">
+	<div id="listados" class="col-md-12">
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+	</div>
+	<div id="listados" class="col-md-2">
+		<input type="button" class="btn btn-success" id="guardarCambios" value="Guardar Cambios">
+	</div>
+	<div class="col-md-1">
+		<input type="button" class="btn btn-info" id="añadirActorPorEdicion" value="Añadir actor">
+	</div>
+	<div id="botonBorrarFilaActorPorEdicion" class="col-md-1">
+		<input type="button" class="btn btn-danger" id="borrarFilaActorPorEdicion" value="Eliminar Fila Añadida">
+	</div>
+	<div class="col-md-4">
+	</div>
+	<div class="col-md-12">
+		<br>
+	</div>
+</div>
+</div>
+<!-- FIN EDICIONES-->
+
+<!-- LISTAR OBRAS POR GÉNERO  -->
+<div id="listarObrasGenero" title="Listar obras por género">
+<div class="hidden-md hidden-lg hidden-xl">
+	<br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<form class="form-horizontal" name="frmListarObrasGenero">
+	<fieldset>
+		<div id="obraListado">
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="tipoObraListado">Genero / Tipo</label>
+				<div class="col-md-7">
+					<select id="tipoObraListado" class="form-control" name="tipoObraListado">
+						
+					</select>
+					
+				</div>
+			</div>
+		</div>
+		<!-- Button (Double) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for=""></label>
+			<div class="col-md-8">
+				<input type="button" class="btn btn-success" name="btnListarObrasGenero" value="Listar">
+				<input type="reset" class="btn btn-danger" value="Reset" />
+			</div>
+		</div>
+		<!-- Button -->		
+	</fieldset>
+</form>
+</div>
+<!-- FIN listar obras genero -->
+
+<!-- LISTAR series POR CAPITULOS  -->
+<div id="divListarSeriesNumCap" title="Listar series por número de capítulos">
+<div class="hidden-md hidden-lg hidden-xl">
+	<br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<form class="form-horizontal" name="frmListarSeriesNumCap">
+	<fieldset>
+		<div id="seriesListadoCap">
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="minCaps">Mínimo de capítulos</label>
+				<div class="col-md-4">
+					<input type="text" name="minCaps" id="minCaps" placeholder="minCaps" >
+				</div>
+			</div>
+				<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="maxCaps">Máximo de capítulos</label>
+				<div class="col-md-4">
+					<input type="text" name="maxCaps" id="maxCaps" placeholder="maxCaps" >
+				</div>
+			</div>
+		</div>
+		<!-- Button (Double) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for=""></label>
+			<div class="col-md-8">
+				<input type="button" class="btn btn-success" name="btnListarSeriesNumCap" value="Listar">
+				<input type="reset" class="btn btn-danger" value="Reset" />
+			</div>
+		</div>
+		<!-- Button -->		
+	</fieldset>
+</form>
+</div>
+<!-- FIN LISTAR series POR CAPITULOS -->
+
+<!-- LISTAR peliculas POR fecha  -->
+<div id="divListarPeliculasPorFecha" title="Listar películas entre fechas">
+<div class="hidden-md hidden-lg hidden-xl">
+	<br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<form class="form-horizontal" id="frmListarPeliculasPorFecha" name="frmListarPeliculasPorFecha">
+	<fieldset>
+		<div id="peliculasPorFecha">
+			<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="fechaMin">Fecha mínima</label>
+			<div class="col-md-6">
+				<input id="fechaMin" name="fechaMin"  type="text" readonly="readonly" placeholder="Seleccione una fecha" class="form-control">
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="fechaMax">Fecha máxima</label>
+			<div id="divCalendarioFechaFin" class="col-md-6">
+				<input id="fechaMax" name="fechaMax" type="text" readonly="readonly" placeholder="Seleccione una fecha" class="form-control">
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		<!-- Button (Double) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for=""></label>
+			<div class="col-md-8">
+				<input type="button" class="btn btn-success" name="btnListarPeliculasPorFecha" value="Listar">
+				<input type="reset" class="btn btn-danger" value="Reset" />
+			</div>
+		</div>
+		<!-- Button -->
+		</div>
+	</fieldset>
+</form>
+</div>
+<!-- FIN LISTAR series POR CAPITULOS -->
+
+
+
+<!--   DAR BAJA CONTRATO -->
+<div id="darBajaContrato" title="Cancelar contrato">
+<form class="form-horizontal" name="frmDarBajaContrato">
+	<fieldset>
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="director">Contrato</label>
+			<div id="comboBajaContratos" class="col-md-8">
+				
+			</div>
+		</div>
+		<!-- Button (Double) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="aceptarBajaContrato"></label>
+			<div class="col-md-8">
+				<input type="button" value="Dar de baja este contrato" id="aceptarBajaContrato" name="aceptarBajaContrato" class="btn btn-danger">
+			</div>
+		</div>
+	</fieldset>
+</form>
+</div>
+<!-- FIN DAR BAJA CONTRATO  -->
+<div id="mensajes" title="mensajes">
+	<p id="pResultado"></p>
+</div>
+<!-- Añadir actor a casting  -->
+
+<div id="añadirActorACasting" title="Añadir actor a casting">
+<form class="form-horizontal" name="frmAñadirActorACasting">
+	<fieldset>
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="director">Castings</label>
+			<div id="comboCasting" class="col-md-8">
+				
+			</div>
+		</div>
+		<!-- Select Basic -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="director">Actores</label>
+			<div id="comboActorAñadirACasting" class="col-md-8">
+				
+			</div>
+		</div>
+		<!-- Button -->
+		<div class="form-group">
+			<label class="col-md-4 control-label"></label>
+			<div class="col-md-8">
+				<input type="button" value="Añadir actor al casting" id="aceptarAñadirActorACasting" name="aceptarAñadirActorACasting" class="btn btn-success">
+			</div>
+		</div>
+	</fieldset>
+</form>
+</div>
+
+<!-- fin Añadir actor a casting  -->
+
+
+
+<!-- PIE PAGINA  -->
+<div class="row hidden-xs">
+<div class="col-md-1">
+</div>
+<div  id="footer" class="col-md-10">
+	<div class="row-fluid" id="footer-bottom">
+		Trabajo Desarrollo Web en Entorno Cliente<br>
+		Copyright © 2016 <a id="nombre">Manuel Osto Méndez</a> && <a id="nombre">Javier Bejarano Campos</a>.
+		<a id="avisos"href="avisoLegal.htm">Aviso legal</a> &&
+		<a id="avisos"href="politicaCookies.htm">Política de cookies</a>.
+	</div>
+</div>
+<div class="col-md-1">
+</div>
+</div>
+<!--FIN PIE PAGINA  -->
+
+</div>
+<!-- jQuery library -->
+<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/objetos.js"></script>
+<script type="text/javascript" src="js/principal.js"></script>
+<script type="text/javascript" src="js/toastr.js"></script>
+<script type="text/javascript" src="js/floatThead.js"></script>
+<script src="http://momentjs.com/downloads/moment.min.js"></script>
+    <script src="js/pikaday.js"></script>
+<script>
+
+    var fechaInicio = new Pikaday({
+        field: document.getElementById('fechaInicio'),
+        firstDay: 1,
+        minDate: new Date(),
+        maxDate: new Date(2030, 12, 31),
+        yearRange: [2000,2030],
+		onSelect: function() {
+		var mydate = new Date(document.getElementById("fechaInicio").value);
+		fechaFin.setMinDate(mydate);
+		}
+    });
+
+				var fechaFin = new Pikaday({
+				field: document.getElementById('fechaFin'),
+				firstDay: 1,
+				minDate: new Date(),
+				maxDate: new Date(2030, 12, 31),
+				yearRange: [2000,2030]
+			});
+	
+	
+    var fechaMin = new Pikaday({
+        field: document.getElementById('fechaMin'),
+        firstDay: 1,
+        maxDate: new Date(2030, 12, 31),
+        yearRange: [2000,2030],
+		onSelect: function() {
+		var mydate = new Date(document.getElementById("fechaMin").value);
+		fechaMax.setMinDate(mydate);
+		}
+    });
+
+	
+
+				var fechaMax = new Pikaday({
+				field: document.getElementById('fechaMax'),
+				firstDay: 1,
+				yearRange: [2000,2030]
+			});
+	
+
+
+    var fechaInicioCasting = new Pikaday({
+        field: document.getElementById('fechaInicioCasting'),
+        firstDay: 1,
+        minDate: new Date(),
+        maxDate: new Date(2030, 12, 31),
+        yearRange: [2000,2030],
+		onSelect: function() {
+		var mydate = new Date(document.getElementById("fechaInicioCasting").value);
+		fechaFinCasting.setMinDate(mydate);
+		}
+    });
+
+	
+
+				var fechaFinCasting = new Pikaday({
+				field: document.getElementById('fechaFinCasting'),
+				firstDay: 1,
+				minDate: new Date(),
+				maxDate: new Date(2030, 12, 31),
+				yearRange: [2000,2030]
+			});
+			
+    </script>
+</body>
+</html>
+<!--  
+-->

@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<datos>
+<trabajadores>
+
+	<director>
+	<dni>11111111D</dni>
+	<nombre>Director A</nombre>
+	<telefono>611222333</telefono>
+	<nacionalidad>Español</nacionalidad>
+	</director>
+
+	<director>
+	<dni>22222222D</dni>
+	<nombre>Director B</nombre>
+	<telefono>622333444</telefono>
+	<nacionalidad>Ruso</nacionalidad>
+	</director>
+
+	<director>
+	<dni>33333333D</dni>
+	<nombre>Director C</nombre>
+	<telefono>633444555</telefono>
+	<nacionalidad>Alemán</nacionalidad>
+	</director>
+
+	<director>
+	<dni>44444444D</dni>
+	<nombre>Director D</nombre>
+	<telefono>644555666</telefono>
+	<nacionalidad>Marroquí</nacionalidad>
+	</director>
+
+
+	<director>
+	<dni>55555555D</dni>
+	<nombre>Director E</nombre>
+	<telefono>655666777</telefono>
+	<nacionalidad>Americano</nacionalidad>
+	</director>
+
+	<representante>
+	<dni>11111111R</dni>
+	<nombre>Representante A</nombre>
+	<telefono>666126380</telefono>
+	<nacionalidad>Español</nacionalidad>
+	</representante>
+
+	<representante>
+	<dni>22222222R</dni>
+	<nombre>Representante B</nombre>
+	<telefono>625796154</telefono>
+	<nacionalidad>Español</nacionalidad>
+	</representante>
+
+	<representante>
+	<dni>33333333R</dni>
+	<nombre>Representante C</nombre>
+	<telefono>668432141</telefono>
+	<nacionalidad>Americano</nacionalidad>
+	</representante>
+
+	<representante>
+	<dni>44444444R</dni>
+	<nombre>Representante D</nombre>
+	<telefono>611818671</telefono>
+	<nacionalidad>Americano</nacionalidad>
+	</representante>
+
+	<representante>
+	<dni>55555555R</dni>
+	<nombre>Representante E</nombre>
+	<telefono>659571451</telefono>
+	<nacionalidad>Americano</nacionalidad>
+	</representante>
+
+	<actor>
+	<dni>11111111A</dni>
+	<nombre>Actor A</nombre>
+	<telefono>636896245</telefono>
+	<nacionalidad>Español</nacionalidad>
+	<estatus>Desconocido</estatus>
+	<rep>11111111R</rep>
+	</actor>
+
+	<actor>
+	<dni>22222222A</dni>
+	<nombre>Actor B</nombre>
+	<telefono>623579485</telefono>
+	<nacionalidad>Aleman</nacionalidad>
+	<estatus>Desconocido</estatus>
+	<rep>22222222R</rep>
+	</actor>
+
+
+	<actor>
+	<dni>33333333A</dni>
+	<nombre>Actor C</nombre>
+	<telefono>681715415</telefono>
+	<nacionalidad>Japonés</nacionalidad>
+	<estatus>Desconocido</estatus>
+	<rep>33333333R</rep>
+	</actor>
+
+	<actor>
+	<dni>44444444A</dni>
+	<nombre>Actor D</nombre>
+	<telefono>694123116</telefono>
+	<nacionalidad>Chino</nacionalidad>
+	<estatus>Desconocido</estatus>
+	<rep>44444444R</rep>
+	</actor>
+
+	<actor>
+	<dni>55555555A</dni>
+	<nombre>Actor E</nombre>
+	<telefono>684156111</telefono>
+	<nacionalidad>Coreano</nacionalidad>
+	<estatus>Desconocido</estatus>
+	<rep>55555555R</rep>
+	</actor>
+
+	<actor>
+	<dni>66666666A</dni>
+	<nombre>Actor F</nombre>
+	<telefono>684141754</telefono>
+	<nacionalidad>Sudamericano</nacionalidad>
+	<estatus>Famoso</estatus>
+	<rep>11111111R</rep>
+	</actor>
+
+</trabajadores>
+
+<producciones>
+	<pelicula>
+		<nombre>Pelicula A</nombre>
+		<dir>11111111D</dir>
+		<fecha>2012-10-10</fecha>
+	</pelicula>
+
+	<pelicula>
+		<nombre>Pelicula B</nombre>
+		<dir>11111111D</dir>
+		<fecha>1997-10-08</fecha>
+	</pelicula>
+
+	<pelicula>
+		<nombre>Pelicula C</nombre>
+		<dir>33333333D</dir>
+		<fecha>2005-05-02</fecha>
+	</pelicula>
+
+	<pelicula>
+		<nombre>Pelicula D</nombre>
+		<dir>55555555D</dir>
+		<fecha>1993-10-10</fecha>
+	</pelicula>
+
+	<pelicula>
+		<nombre>Pelicula E</nombre>
+		<dir>22222222D</dir>
+		<fecha>2012-2-10</fecha>
+	</pelicula>
+
+	<pelicula>
+		<nombre>Pelicula F</nombre>
+		<dir>44444444D</dir>
+		<fecha>2012-01-10</fecha>
+	</pelicula>
+
+	<serie>
+		<nombre>Serie A</nombre>
+		<dir>11111111D</dir>
+		<numCaps>10</numCaps>
+	</serie>
+
+	<serie>
+		<nombre>Serie B</nombre>
+		<dir>11111111D</dir>
+		<numCaps>08</numCaps>
+	</serie>
+
+	<serie>
+		<nombre>Serie C</nombre>
+		<dir>33333333D</dir>
+		<numCaps>02</numCaps>
+	</serie>
+
+	<serie>
+		<nombre>Serie D</nombre>
+		<dir>55555555D</dir>
+		<numCaps>10</numCaps>
+	</serie>
+
+	<serie>
+		<nombre>Serie E</nombre>
+		<dir>22222222D</dir>
+		<numCaps>1000</numCaps>
+	</serie>
+
+	<serie>
+		<nombre>Serie F</nombre>
+		<dir>44444444D</dir>
+		<numCaps>1123</numCaps>
+	</serie>
+
+	<obra>
+		<nombre>Obra A</nombre>
+		<dir>11111111D</dir>
+		<genero>Infantil</genero>
+	</obra>
+
+	<obra>
+		<nombre>Obra B</nombre>
+		<dir>11111111D</dir>
+		<genero>Tragedia</genero>
+	</obra>
+
+	<obra>
+		<nombre>Obra C</nombre>
+		<dir>33333333D</dir>
+		<genero>Comedia</genero>
+	</obra>
+
+	<obra>
+		<nombre>Obra D</nombre>
+		<dir>55555555D</dir>
+		<genero>Documental</genero>
+	</obra>
+
+	<obra>
+		<nombre>Obra E</nombre>
+		<dir>22222222D</dir>
+		<genero>Zarzuela</genero>
+	</obra>
+
+	<obra>
+		<nombre>Obra F</nombre>
+		<dir>44444444D</dir>
+		<genero>Sainete</genero>
+	</obra>
+</producciones>
+
+<casting>
+	<fechaIni>1/10/2012</fechaIni>
+	<fechaFin>1/12/2012</fechaFin>
+	<nombre>Casting A</nombre>
+	<nombreP>Pelicula A</nombreP>
+	<tipoP>Pelicula</tipoP>
+</casting>
+<casting>
+	<fechaIni>1/10/2009</fechaIni>
+	<fechaFin>1/12/2010</fechaFin>
+	<nombre>Casting G</nombre>
+	<nombreP>Pelicula A</nombreP>
+	<tipoP>Pelicula</tipoP>
+</casting>
+<casting>
+	<fechaIni>19/10/2005</fechaIni>
+	<fechaFin>11/12/2005</fechaFin>
+	<nombre>Casting B</nombre>
+	<nombreP>Pelicula B</nombreP>
+	<tipoP>Pelicula</tipoP>
+</casting>
+<casting>
+	<fechaIni>13/10/2011</fechaIni>
+	<fechaFin>19/11/2012</fechaFin>
+	<nombre>Casting C</nombre>
+	<nombreP>Pelicula C</nombreP>
+	<tipoP>Pelicula</tipoP>
+</casting>
+<casting>
+	<fechaIni>17/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting D</nombre>
+	<nombreP>Pelicula D</nombreP>
+	<tipoP>Pelicula</tipoP>
+</casting>
+<casting>
+	<fechaIni>12/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting E</nombre>
+	<nombreP>Pelicula E</nombreP>
+	<tipoP>Pelicula</tipoP>
+</casting>
+<casting>
+	<fechaIni>10/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting F</nombre>
+	<nombreP>Pelicula F</nombreP>
+	<tipoP>Pelicula</tipoP>
+</casting>
+
+<casting>
+	<fechaIni>1/10/2012</fechaIni>
+	<fechaFin>1/12/2012</fechaFin>
+	<nombre>Casting A</nombre>
+	<nombreP>Serie A</nombreP>
+	<tipoP>Serie</tipoP>
+</casting>
+<casting>
+	<fechaIni>19/10/2005</fechaIni>
+	<fechaFin>11/12/2005</fechaFin>
+	<nombre>Casting B</nombre>
+	<nombreP>Serie B</nombreP>
+	<tipoP>Serie</tipoP>
+</casting>
+<casting>
+	<fechaIni>13/10/2011</fechaIni>
+	<fechaFin>19/11/2012</fechaFin>
+	<nombre>Casting C</nombre>
+	<nombreP>Serie C</nombreP>
+	<tipoP>Serie</tipoP>
+</casting>
+<casting>
+	<fechaIni>17/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting D</nombre>
+	<nombreP>Serie D</nombreP>
+	<tipoP>Serie</tipoP>
+</casting>
+<casting>
+	<fechaIni>12/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting E</nombre>
+	<nombreP>Serie E</nombreP>
+	<tipoP>Serie</tipoP>
+</casting>
+<casting>
+	<fechaIni>10/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting F</nombre>
+	<nombreP>Serie F</nombreP>
+	<tipoP>Serie</tipoP>
+</casting>
+
+<casting>
+	<fechaIni>1/10/2012</fechaIni>
+	<fechaFin>1/12/2012</fechaFin>
+	<nombre>Casting A</nombre>
+	<nombreP>Obra A</nombreP>
+	<tipoP>Obra</tipoP>
+</casting>
+<casting>
+	<fechaIni>19/10/2005</fechaIni>
+	<fechaFin>11/12/2005</fechaFin>
+	<nombre>Casting B</nombre>
+	<nombreP>Obra B</nombreP>
+	<tipoP>Obra</tipoP>
+</casting>
+<casting>
+	<fechaIni>13/10/2011</fechaIni>
+	<fechaFin>19/11/2012</fechaFin>
+	<nombre>Casting C</nombre>
+	<nombreP>Obra C</nombreP>
+	<tipoP>Obra</tipoP>
+</casting>
+<casting>
+	<fechaIni>17/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting D</nombre>
+	<nombreP>Obra D</nombreP>
+	<tipoP>Obra</tipoP>
+</casting>
+<casting>
+	<fechaIni>12/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting E</nombre>
+	<nombreP>Obra E</nombreP>
+	<tipoP>Obra</tipoP>
+</casting>
+<casting>
+	<fechaIni>10/10/2009</fechaIni>
+	<fechaFin>30/11/202009</fechaFin>
+	<nombre>Casting F</nombre>
+	<nombreP>Obra F</nombreP>
+	<tipoP>Obra</tipoP>
+</casting>
+
+
+
+</datos>

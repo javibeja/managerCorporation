@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="esqueleto.css">
+<style>
+tr{
+text-align:center;
+}
+th{
+text-align:center;
+}
+
+</style>
+	</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-1">
+		</div>
+		<div  id="banner" class="col-md-10">
+			<div style="margin-top:1%;" class="page">
+				<h1 id="h1Cabecera">
+					Maganer Corporation
+				</h1>
+			</div>
+		</div>
+		<div class="col-md-1">
+		</div>
+	</div>
+	<br>
+	
+			<div class="row">
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-10">
+			<div class="page-header">
+				<h3>
+					Listados
+				</h3>
+			</div>
+			<br>
+		</div>
+		<div class="col-md-1">
+		</div>
+	</div>
+			<div class="row">
+				<div class="col-md-1">
+				</div>
+				<div id="listados" class="col-md-10">
+				</div>
+				<div class="col-md-1">
+				</div>
+			</div>
+	<div class="row">
+		<div class="col-md-1">
+		</div>
+		<div  id="footer" class="col-md-10">
+			<div class="row-fluid" id="footer-bottom">
+			Trabajo Desarrollo Web en Entorno Cliente<br>
+			Copyright © 2016 <a id="nombre">Manuel Osto Méndez</a> && <a id="nombre">Javier Bejarano Campos</a>
+							<a id="avisos"href="avisoLegal.htm">Aviso legal &&</a>
+							<a id="avisos"href="politicaCookies.htm">Política de cookies.</a>
+			</div>	
+		</div>
+		<div class="col-md-1">
+		</div>
+	</div>
+</div>
+
+<script>
+/*listados trabajadores*/
+var ventanaPadre = window.opener;
+	console.log(ventanaPadre);
+	var divListados = document.getElementById('listados');
+	
+		document.getElementById("footer").style.position = "relative";
+		if(ventanaPadre.tipoListado=="Actor" || ventanaPadre.tipoListado=="Director" || ventanaPadre.tipoListado=="Representante"){
+				divListados.appendChild(ventanaPadre.oManagerCorporation.getListadoPorTipoTrabajadores(ventanaPadre.tipoListado));
+		}else{
+				if(ventanaPadre.tipoListado=="Serie" || ventanaPadre.tipoListado=="Pelicula" || ventanaPadre.tipoListado=="Obra"){
+					divListados.appendChild(ventanaPadre.oManagerCorporation.getListadoProduccionPorTipo(ventanaPadre.tipoListado));
+				}
+				else
+				{
+					if (ventanaPadre.tipoListado=="obrasPorGenero") {
+						divListados.appendChild(ventanaPadre.oManagerCorporation.getListadoObrasPorGenero(ventanaPadre.genero));
+					}
+					else
+					{
+						if (ventanaPadre.tipoListado=="seriesNumCap") {
+							divListados.appendChild(ventanaPadre.oManagerCorporation.getListadoSeriesNumCap(ventanaPadre.minCaps, ventanaPadre.maxCaps));
+						}
+						else
+							if (ventanaPadre.tipoListado=="peliculasPorFecha") {
+							divListados.appendChild(ventanaPadre.oManagerCorporation.getListadoPeliculasPorFecha(ventanaPadre.fechaMin, ventanaPadre.fechaMax));
+							}
+						}	
+					}
+				}
+		
+
+</script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

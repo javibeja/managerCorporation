@@ -1,0 +1,54 @@
+body{
+	overflow-x:  hidden;
+
+}
+
+#banner{
+background-image:url('banner.jpg');
+	background-size: 100% 100%;
+	height:150px;
+	background-repeat:no-repeat;
+	-webkit-border-radius: 20px 20px;  /* Safari  */
+    -moz-border-radius: 20px 20px;     /* Firefox */
+  
+}
+#h1Cabecera{
+font-weight: bold;
+color:white;
+}
+#bannerLittle{
+font-weight: bold;
+background-color:#FAFAFA;
+}
+#inicio{
+	margin-top:16%;
+}
+#cabeceraMenu{
+	width:100%;
+	top: 0%; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+	z-index: 1;
+}
+#navbar{
+	height:4.5%;
+	background-color:#FAFAFA;
+	-webkit-border-radius: 10px 10px;  /* Safari  */
+    -moz-border-radius: 10px 10px;     /* Firefox */
+}
+#footer{
+	margin-left:9%;
+	margin-right: 8%;
+	font-weight: bold;
+	text-align:center;
+	background: -webkit-linear-gradient(180deg, #5882FA,#08088A );
+	-webkit-border-radius: 5px 5px;   
+    -moz-border-radius: 5px 5px;     
+	font-size: 10pt;	
+	color:white;
+	position:relative;
+	 bottom:0;
+}
+
+#footer a{
+	color:white;
+}
